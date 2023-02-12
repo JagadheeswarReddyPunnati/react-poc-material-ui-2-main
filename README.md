@@ -1,3 +1,6 @@
+# References
+Redux thunk - https://github.com/gopinav/React-Redux-Tutorials/tree/master/react-redux-demo
+Redux saga - https://github.com/VenkateshMogili/sample-project
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
