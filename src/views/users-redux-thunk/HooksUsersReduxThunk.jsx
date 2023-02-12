@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { fetchUsers4Hooks } from '../../redux/index.js';
 import RegularButton from "../../material-ui-components/CustomButtons/Button.js";
 function HooksUsersReduxThunk() {
-    const userData = useSelector(state => state.useHooks)
+    const userData = useSelector(state => state.userHooks)
     const dispatch = useDispatch()
     return <div>
         <RegularButton onClick={() => dispatch(fetchUsers4Hooks())} color="info" size="lg" > Load Users Redux Thunk Hooks</RegularButton>

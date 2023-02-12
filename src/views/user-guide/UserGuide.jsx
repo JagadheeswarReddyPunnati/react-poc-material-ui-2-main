@@ -14,6 +14,7 @@ import StaticBottomPanel from "../static-bottom-panel/StaticBottomPanel.js"
 import styles from "../../assets/jss/material-react/views/dashboardStyle.js";
 import UsersReduxThunk from "../users-redux-thunk/UsersReduxThunk.jsx";
 import HooksUsersReduxThunk from "../users-redux-thunk/HooksUsersReduxThunk"
+import UsersReduxSagas from "../users-redux-saga/UsersReduxSagas"
 const useStyles = makeStyles(styles);
 
 function UserGuide({userData,fetchUsers}) {
@@ -28,7 +29,8 @@ function UserGuide({userData,fetchUsers}) {
           <CardBody>
             <h6>UserGuide Content </h6>
             <UsersReduxThunk/>
-            <HooksUsersReduxThunk/>
+            <HooksUsersReduxThunk/> 
+            <UsersReduxSagas/>
             <StaticBottomPanel />
           </CardBody>
         </Card>
