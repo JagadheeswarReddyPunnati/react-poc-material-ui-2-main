@@ -1,12 +1,15 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import {bindActionCreators} from 'redux';
-import {getAllUsersRequestWatcher} from "../../redux/userSagas/userSagasActions"
+import {getAllUsersRequestWatcher,editUserRequestWatcher} from "../../redux/userSagas/userSagasActions"
 import RegularButton from "../../material-ui-components/CustomButtons/Button.js";
 
-function UsersReduxSagas({ userSagasData, getAllUsersRequestWatcher }) {
+function UsersReduxSagas({ userSagasData, getAllUsersRequestWatcher,editUserRequestWatcher }) {
+    const editUser={name: 'Jagadeesh'};
+    const userId= 1;
     return <div>
-        <RegularButton onClick={() => getAllUsersRequestWatcher()} color="primary" size="lg" > Load Users Redux Sagas</RegularButton>
+        <RegularButton onClick={() => getAllUsersRequestWatcher()} color="primary" size="lg" > Load Users Redux Sagas</RegularButton> 
+        <RegularButton onClick={() => editUserRequestWatcher(editUser,userId)} color="primary" size="lg" > Update User Redux Sagas</RegularButton>
         <div>
             {
                 userSagasData.loading ? (
@@ -37,7 +40,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = (dispatch) => {
     return bindActionCreators(
       {
-        getAllUsersRequestWatcher       
+        getAllUsersRequestWatcher,
+        editUserRequestWatcher       
       },
       dispatch,
     );

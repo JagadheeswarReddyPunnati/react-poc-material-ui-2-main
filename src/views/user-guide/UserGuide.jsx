@@ -30,9 +30,11 @@ function UserGuide({ userData, fetchUsers }) {
             <h6>UserGuide Content </h6>
             <table>
               <tbody>
-                <td><UsersReduxThunk /></td>
-                <td> <HooksUsersReduxThunk />  </td>
-                <td><UsersReduxSagas /></td>
+                <tr>
+                  <td><UsersReduxThunk /></td>
+                  <td> <HooksUsersReduxThunk />  </td>
+                  <td><UsersReduxSagas /></td>
+                </tr>
               </tbody>
             </table>
             <StaticBottomPanel />
