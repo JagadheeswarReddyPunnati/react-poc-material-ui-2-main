@@ -17,7 +17,7 @@ import HooksUsersReduxThunk from "../users-redux-thunk/HooksUsersReduxThunk"
 import UsersReduxSagas from "../users-redux-saga/UsersReduxSagas"
 const useStyles = makeStyles(styles);
 
-function UserGuide({userData,fetchUsers}) {
+function UserGuide({ userData, fetchUsers }) {
   const classes = useStyles();
   return (
     <GridContainer>
@@ -28,9 +28,13 @@ function UserGuide({userData,fetchUsers}) {
           </CardHeader>
           <CardBody>
             <h6>UserGuide Content </h6>
-            <UsersReduxThunk/>
-            <HooksUsersReduxThunk/> 
-            <UsersReduxSagas/>
+            <table>
+              <tbody>
+                <td><UsersReduxThunk /></td>
+                <td> <HooksUsersReduxThunk />  </td>
+                <td><UsersReduxSagas /></td>
+              </tbody>
+            </table>
             <StaticBottomPanel />
           </CardBody>
         </Card>
